@@ -1,0 +1,24 @@
+1. Hvað er leikavél?
+- Leikavél er vél sem leikjaforritarar nota til að búa til leikina sína á þægilega vegu
+
+2. Útskýrðu GameLoop í Unity
+- Game loop er lykkja af kóða sem runnar aftur og aftur til að uppfæra allt sem á að gerast í leiknum og kíkir á allskonar hluti
+
+3. Hvað er asset? nefndu algengar tegundir.
+- 
+
+4. Hvað er e. game object og hvernig tengist það e. components í e. Inspector?
+-
+
+5. Hvað er líkt og ólíkt með game object og e. prefab?
+-
+
+6. Hvað er e. tags og e. layers?
+-
+
+7. Útskýrðu stuttlega hlutverk eftirfarandi glugga/svæði í Unity:
+  i. Scene view - 
+  ii. Game view
+  iii. Project
+  iii. Hierarchy
+  iii. Inspector
