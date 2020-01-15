@@ -2,29 +2,18 @@
 
 public class Movement : MonoBehaviour
 {
-
     public Rigidbody rb;
-    // Start is called before the first frame update
-    void Start() {
-        Debug.Log("Hello");
-    }
-
+    public float forwardForce = 2000f;
+    public float sidewaysForce = 500f;
+    
     // Update is called once per frame
     void FixedUpdate() {
-        if (Input.GetKeyDown ("up")) {
-        rb.AddForce(0, 0,500*Time.deltaTime*60);
+        rb.AddForce(0,0,forwardForce * Time.deltaTime);
+        if (Input.GetKey("d")) {
+            rb.AddForce(sidewaysForce*Time.deltaTime,0,0);
         }
-        if (Input.GetKeyDown ("space")) {
-        rb.AddForce(0, 500*Time.deltaTime*60 , 0);
-        }
-        if (Input.GetKeyDown ("down")) {
-        rb.AddForce(0, 0, -500*Time.deltaTime*60);
-        }
-        if (Input.GetKeyDown ("left")) {
-        rb.AddForce(-500*Time.deltaTime*60,0,0);
-        }
-        if (Input.GetKeyDown ("right")) {
-        rb.AddForce(500*Time.deltaTime*60,0,0);
+        else if (Input.GetKey("a")) {
+            rb.AddForce(-sidewaysForce*Time.deltaTime,0,0);
         }
     }
 }
