@@ -53,9 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FollowPlayer.cs" />
-     <Compile Include="Assets\PlayerCollision.cs" />
+     <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\Skriftur\FollowPlayer.cs" />
      <Compile Include="Assets\Skriftur\Movement.cs" />
+     <Compile Include="Assets\Skriftur\PlayerCollision.cs" />
+     <Compile Include="Assets\Skriftur\Score.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/1809022520/Documents/Leikjaforritun/Verkefni1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
