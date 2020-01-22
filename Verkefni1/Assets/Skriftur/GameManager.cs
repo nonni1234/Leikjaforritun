@@ -4,6 +4,11 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
     public float restartDelay = 1f;
+
+    public void CompleteLevel() {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log(SceneManager.GetActiveScene().name);
+    }
    public void EndGame () {
 
        if (gameHasEnded == false) {
@@ -11,9 +16,9 @@ public class GameManager : MonoBehaviour
        Debug.Log("GAME OVER");
        Invoke("Restart", restartDelay);
        }
-    void Restart () {
+   }
+    void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-   } 
-}
+} 
