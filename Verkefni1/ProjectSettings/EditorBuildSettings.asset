@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Byrja.unity
+    guid: 14193861eea00654aa2490b3d3150e0e
+  - enabled: 1
+    path: Assets/Scenes/Level01.unity
+    guid: 216ea841509630445af9c397f9b6bbbc
+  - enabled: 1
+    path: Assets/Scenes/Level02.unity
+    guid: 64c6cb2a2f9823c4894384a45a9770ad
+  - enabled: 1
+    path: Assets/Scenes/Level03.unity
+    guid: afe01ae5d9583674abed7ddc5cba0b57
+  - enabled: 1
+    path: Assets/Scenes/LeikurBuinn.unity
+    guid: 180c0ac79c698054193eb16b2728ca29
   m_configObjects: {}

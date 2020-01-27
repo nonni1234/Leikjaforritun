@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public float sidewaysForce = 500f;
     
     // Update is called once per frame
-    void FixedUpdate() {
+    void FixedUpdate() { // Hreyfir player eftir lyklaborð input
         rb.AddForce(0,0,forwardForce * Time.deltaTime);
         if (Input.GetKey("d")) {
             rb.AddForce(sidewaysForce*Time.deltaTime,0,0, ForceMode.VelocityChange);
@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
             rb.AddForce(-sidewaysForce*Time.deltaTime,0,0, ForceMode.VelocityChange);
         }
 
-        if(rb.position.y < -1f) {
+        if(rb.position.y < -1f) { // Ef playerinn datt af þá byrjar borðið aftur
             FindObjectOfType<GameManager>().EndGame();
         }
     }

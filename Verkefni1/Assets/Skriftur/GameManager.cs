@@ -4,21 +4,20 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
     public float restartDelay = 1f;
+    public GameObject LevelUI;
 
-    public void CompleteLevel() {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Debug.Log(SceneManager.GetActiveScene().name);
+    public void CompleteLevel() { // Skrifar 'Borð Klárað' á skjáinn þegar borð er klárað
+        LevelUI.SetActive(true);
     }
-   public void EndGame () {
-
+   public void EndGame () { // Keyrist ef Player rekst á object
        if (gameHasEnded == false) {
        gameHasEnded = true;
        Debug.Log("GAME OVER");
-       Invoke("Restart", restartDelay);
+       Invoke("Restart", restartDelay); // Kallar á restart með 1 sek delay
        }
    }
     void Restart() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Byrjar næsta scene
     }
 
 } 

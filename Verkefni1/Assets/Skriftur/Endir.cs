@@ -4,8 +4,8 @@ public class Endir : MonoBehaviour
 {
     public GameManager gameManager;
 
-    void OnTriggerEnter()
+    void OnTriggerEnter() // Keyrist þegar level er klárað
     {
-        gameManager.CompleteLevel();
+        gameManager.CompleteLevel(); // Klárar levelið og fer á næsta
     }
 }
