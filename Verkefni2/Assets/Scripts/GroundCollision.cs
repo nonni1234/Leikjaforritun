@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class GroundCollision : MonoBehaviour
 {
-    public GameObject player;
+    public PlayerMovement player;
 
-    void OnCollisionEnter() {
+    public void OnCollisionEnter() {
         player.Grounded();
     }
 }

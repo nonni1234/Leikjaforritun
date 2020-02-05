@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("space") && grounded == true) { // Að hoppa
             grounded = false;
-            rb.AddForce(0, 500 * Time.deltaTime,0,ForceMode.Impulse);
+            rb.AddForce(0, 100* Time.deltaTime,0,ForceMode.Impulse);
         }
         // wasd movement
         if (Input.GetKey("w"))
