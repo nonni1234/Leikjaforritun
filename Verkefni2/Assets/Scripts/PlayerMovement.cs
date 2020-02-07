@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     GameObject pl;
     bool grounded;
     public float Force;
+    public float JumpForce;
 
     public void Grounded() { // Runnar þegar player collidar við ground
         grounded = true;
@@ -18,13 +19,14 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         player = GetComponent<Transform>();
     }
-    void Update() {
+    void FixedUpdate() {
 
         // Hreyfingin
 
         if (Input.GetKey("space") && grounded == true) { // Að hoppa
+            Debug.Log("Jumped");
             grounded = false;
-            rb.AddForce(0, 100* Time.deltaTime,0,ForceMode.Impulse);
+            rb.AddForce(0, JumpForce* Time.deltaTime,0,ForceMode.Impulse);
         }
         // wasd movement
         if (Input.GetKey("w"))
