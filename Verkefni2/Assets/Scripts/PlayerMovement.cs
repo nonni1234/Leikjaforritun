@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         player = GetComponent<Transform>();
     }
+  
     void FixedUpdate() {
 
         // Hreyfingin
