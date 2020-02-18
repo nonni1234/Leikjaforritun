@@ -10,11 +10,8 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;
     public float Force;
     public float JumpForce;
-
-    public float speedH = 2.0f;
-    public float speedV = 2.0f;
-
-    private float yaw = 0.0f;
+    public float speedH = 2.0f; // Notað fyrir rotation
+    private float yaw = 0.0f; // Notað fyrir rotation
 
     public void Grounded() { // Runnar þegar player collidar við ground
         grounded = true;
@@ -33,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         // Hreyfingin
         yaw += speedH * Input.GetAxis("Mouse X");
 
-        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
+        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f); // Rotatear eftir músarstaðsetningu
         if (Input.GetKey("space") && grounded == true) { // Að hoppa
             Debug.Log("Jumped");
             grounded = false;
@@ -58,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddRelativeForce(Force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (transform.position.y < 0)
+        if (transform.position.y < -1) // Runnar ef Mario dettur niður of langt
         {
             gameManager.ResetLevel();
         }

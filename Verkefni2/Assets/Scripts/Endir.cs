@@ -5,6 +5,6 @@ public class Endir : MonoBehaviour
     public GameManager gameManager;
 
     void OnTriggerEnter() {
-        gameManager.LoadNextLevel();
+        gameManager.LoadNextLevel(); // Loader næsta level við 
     }
 }

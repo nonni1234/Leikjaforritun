@@ -7,6 +7,6 @@ public class Score : MonoBehaviour
     public int score = 0;
     private void Update()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString(); // Score á skjánum
     }
 }
