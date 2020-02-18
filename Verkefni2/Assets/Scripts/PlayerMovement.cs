@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
     Transform player;
     Rigidbody rb;
     GameObject pl;
+    public GameManager gameManager;
     public Transform cam;
     bool grounded;
     public float Force;
@@ -56,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("d"))
         {
             rb.AddRelativeForce(Force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+        if (transform.position.y < 0)
+        {
+            gameManager.ResetLevel();
         }
         
 
